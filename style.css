@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+    background: url(background2.jpg);
+    background-size: cover;
+    background-color: rgb(3, 3, 3);
+    color: white;
+}
+/* Navbar */
+nav {
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    /* opacity: 0.; Transparasi Warna */
+    justify-content: space-around; /*Arah Keluar Navbar*/
+    color: aliceblue;
+    height: 50px;
+    align-items: center;
+}
+
+span {
+    color: rgb(8, 233, 222);
+}
+
+nav .logo {
+    font-family: "Poppins", sans-serif; /*font navbar*/
+}
+
+nav ul {
+    display: flex;
+    list-style: none; /*titik dalam navbar*/
+    width: 40%;
+    justify-content: space-around;
+}
+
+nav ul li a {
+    color: rgb(8, 233, 222);
+    text-decoration: none;
+    width: 40%;
+    font-size: 17px;
+}
+
+nav ul li a:hover {
+    color: rgb(255, 255, 255);
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 15px;
+    justify-content: space-between;
+    width: 15px;
+    position: relative;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    left: -5px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: black;
+    width: 20px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+/* Hamburger Menu Animation (memutar menu) */
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+    background-color: white;
+    transform: rotate(45deg) translate(-1px,-1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+    background-color: white;
+    transform: rotate(-45deg) translate(-1px, 0px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0)
+}
+
+/* responsive */
+/* mobile */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+    nav ul {
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 30vh;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1;
+        transform: translateY(-100%);
+        transition: all 1s;
+    }
+
+    nav ul.slide {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Home */
+/* Teks Perkenalan */
+
+.Home {
+    background-image: url();
+    background-size: 10px;
+}
+
+.hero-name { 
+    position: absolute;
+    padding-top: 250px;
+    padding-left: 200px;
+}
+
+/* icon instagram dll. */
+.icon { 
+    height: 30px;
+    padding-top: 5px;
+    padding-left: 25px;
+}
+
+/* gambar */
+.image { 
+position: absolute;
+height: 200px;
+padding-top: 250px;
+padding-left: 800px;
+}
+
+/* Profile */
+
+.Profile {
+    background-color: rgb(19, 18, 18)
+}
+
+div h1 {
+    text-align: center;
+    padding-top: 100px;
+    font-size: 30px;
+    color: rgb(8, 233, 222);
+}
+
+.box {
+    background-color: rgb(0, 0, 0);
+    border: 5px solid #03d2ed;
+    justify-content: center;
+    margin-left: 220px;
+    margin-top: 70px;
+    padding-right: 80px;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 800px;
+    text-align: center;
+}
+
+.box-2 {
+    background-color: rgb(0, 0, 0);
+    border: 5px solid #03d2ed;
+    justify-content: center;
+    margin-left: 220px;
+    margin-top: 70px;
+    padding-right: 80px;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 800px;
+    text-align: center;
+}
+
+/* skill & Education */
+
+.skill-judul {
+    padding-top: 70px;
+    padding-left: 70px;
+}
+
+/* Portofolio */
+#portofolio {
+    padding: center;
+}
+
+.portofolio {
+    border-radius: var(item);
+    overflow: hidden;
+    border: px solid;
+}
+
+.pre-title { /* My Works */
+    padding-top: 70px; 
+    padding-left: 150px;
+    font-size: 25px;
+}
+
+.section-title { /* Portfolios */
+    padding-left: 180px;
+    font-size: 30px;
+
+}
+
+.portofolio-cover {
+    height: 250px;
+    width: 250px;
+    padding-top: 80px;
+    padding-left: 250px;
+}
+
+.portofolio-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portofolio-info { /* Informasi Portfolio */
+    padding-left: 250px;
+}
+
+.portofolio-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.portofolio h4 { /* Portfolios Website */
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.portofolio-tags {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem;
+}
+
+.portofolio-tags div { /* HTML CSS */
+    font-size: .9rem;
+    border: 1px solid;
+    padding: .4rem 1rem;
+}
+
+/* Pembagian Isi */
+section {
+    height: 720px;
+    margin: auto;
+    border: 3px solid #03d2ed;
+}
